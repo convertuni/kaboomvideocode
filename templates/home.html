@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0FL7WW0NKZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0FL7WW0NKZ');
+</script>
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaboom Video - Free Video Conferencing</title>
+
+<style>
+#more {display: none;}
+</style>
+
+</head>
+<body>
+
+    <div class="heading mb-4">
+        <h1 class="display-4">Kaboom Video<small> beta!</small></h1>
+    </div>
+    <div class="container text-center mt-5">
+        <h4>Kaboom Video Chat</h4>
+        <p>
+            Enter a Room Name to continue. <br> 
+            Unlimited people can join a room.
+        </p>
+
+        <form id="room_form" method="POST" class="form shadow" style="max-width:400px; margin-left: auto; margin-right: auto;">
+            <div class="input-group mb-3">
+                <input type="text" name="room_id" id="room_id" class="form-control" placeholder="Room Name" autofocus required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <div class="input-group-append">
+                    <input type="submit" value="Continue" class="btn btn-primary">
+                </div>
+                
+            </div>
+        </form>
+    </div>
+
+        <center><p>
+            By continuing, you agree to our <a href="/terms" target="_blank">Terms</a> & <a href="/privacy" target="_blank">Privacy Policy</a>.<br>
+            If you're creating a new room, make up a Room Name.
+        </p></center><br><br>
+
+<center><p><span id="dots"></span><span id="more">Kaboom Video is a free online video chat/conference<br>platform. It is safe, secure, and private - and you can<br>talk to anyone using it, including your friends, family, and coworkers.</span></p>
+<button onclick="myFunction()" class="btn btn-primary" id="myBtn">What is Kaboom Video?</button></center>
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "What is Kaboom Video?"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Hide"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>    
+
+</body>
+</html>
